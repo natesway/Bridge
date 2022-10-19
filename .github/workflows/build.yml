@@ -27,7 +27,7 @@ jobs:
         with:
           java-version: ${{ matrix.java }}
       - name: make gradle wrapper executable
-        if: ${{ runner.os != 'Windows' }}
+        if: ${{ runner.os != 'Linux' }}
         run: chmod +x ./gradlew
       - name: build
         run: ./gradlew jar
